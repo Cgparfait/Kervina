@@ -1,0 +1,73 @@
+//== VARIABLE ===
+
+// ---- Color -------
+@black: #181616;
+@white: #fff;
+
+@blue: #23a0bf;
+@red: #E74C3C;
+@green: #81B441;
+@orange: #FF7C44;
+
+
+@base-color: @red;
+@second-color: @black;
+@accent-color: @gray;
+
+
+@gray: 			#b5b5b5;
+@gray-dark: 	darken(@gray, 26.2%);	/* #727272 */
+@gray-darker: 	darken(@gray, 51%); 	/* #333333 */
+@gray-light: 	lighten(@gray, 5%);  	/* #c2c2c2 */
+@gray-lighter: 	lighten(@gray, 21%);  	/* #eeeeee */
+
+@body-bg: @white;
+
+@link-color: @base-color;
+@link-hover-color: @second-color;
+@link-active-color: @second-color;
+
+@menu-link-color: @white;
+@menu-hover-color: @second-color;
+
+@logo-color: @white;
+@header-color: @white;
+@footer-color: @header-color;
+
+
+
+// ---- Fonts -------
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,400italic,600,600italic,700,700italic);
+
+@base-font: 'Open Sans', Helvetica, Arial, sans-serif;
+@heading-font: 'Montserrat', Helvetica, Arial, sans-serif;
+@font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
+
+@base-font-size: 16px;
+
+@base-font-weight: 400;
+@heading-font-weight: 600;
+
+@base-line-height: @base-font-size*1.7;
+@heading-line-height: 1.2em;
+
+@letter-spacing: .1em;
+
+@icon-font-path: "../fonts/";
+
+
+// ---- Responsive Breakpoint -------
+@highdensity: 	~"only screen and (-webkit-min-device-pixel-ratio: 1.5)",
+              	~"only screen and (min--moz-device-pixel-ratio: 1.5)",
+              	~"only screen and (-o-min-device-pixel-ratio: 3/2)",
+              	~"only screen and (min-device-pixel-ratio: 1.5)";
+@mobile:		~"only screen and (max-width: 767px)";
+@tablet:		~"only screen and (min-width: 768px) and (max-width: 979px)"; 
+@desktop:	~"only screen and (min-width: 980px)";
+
+
+
+// @mobile:      ~"only screen and (max-width: 529px)";
+// @tablet:      ~"only screen and (min-width: 530px) and (max-width: 949px)";
+// @desktop:     ~"only screen and (min-width: 950px) and (max-width: 1128px)";
+// @desktop-xl:  ~"only screen and (min-width: 1129px)";

@@ -1,0 +1,79 @@
+<div class="widget comments" class="clearfix" id="comments">
+
+    <h5 class="widget-title">3 Comments</h5>
+
+    {% for comment in comments %}
+    <ol class="comment-list">
+
+        <li class="comment">
+
+            <div class="comment-wrap">
+                <!--<div class="comment-avatar">
+                    <img alt="" src="http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60" class="avatar avatar-60 photo avatar-default" height="60" width="60">
+                </div>-->
+
+                <div class="comment-content">
+                    <div class="comment-author"><a href="author.html">{{ comment.author.username }}</a> <span class="meta-time">2 min ago</span></div>
+
+                    <p>{{ comment.text }}</p>
+
+                    <a class="comment-reply-link" href="#"> Reply</a>
+
+                </div>
+            </div>
+
+            <!-- reply -->
+            <!--
+                <ul class="children">
+
+                <li class="comment">
+                    <div class="comment-wrap">
+                        <div class="comment-avatar">
+                            <img alt="" src="http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60" class="avatar avatar-60 photo avatar-default" height="60" width="60">
+                        </div>
+
+                        <div class="comment-content">
+                            <div class="comment-author"><a href="author.html">John Doe</a> <span class="meta-time">2 min ago</span></div>
+
+                            <p>Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+
+                            <a class="comment-reply-link" href="#"> Reply</a>
+
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+            -->
+
+        </li>
+
+    </ol><!-- .commentlist end -->
+    {% endfor %}
+
+    <div class="respond">
+
+        <h3>Leave a <span>Comment</span></h3>
+
+        <form class="row" role="form" method="POST" action="{% url 'post_detail' post_id=post.id %}">
+            {% csrf_token %}
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="">Comment</label>
+                    
+                    {{ form.text.errors }}
+
+                    <textarea name="text" id="" rows="6" class="form-field" ></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-md">Submit</button>
+
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Notify me of followup comments via e-mail
+                    </label>
+                </div>
+            </div>
+        </form>
+
+    </div><!-- #respond end -->

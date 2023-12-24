@@ -1,0 +1,50 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<div class="col-md-9 content-area">
+	<div class="main-content">
+					
+		<article class="post post-single">
+
+			<header class="post-heading">
+				<div class="post-title">
+					<h1>{{ post.title }}</h1>
+					<p class="meta-entry">
+						<span class="meta-date">{{ post.created_at }}</span>
+						by
+						<span class="author">
+							<a href="author.html">{{ post.author.user.username }}</a>
+						</span>
+						<span class="meta-cat">Posted in <a href="#">Tutorial</a></span>
+						<span class="total-comments">
+							<i class="icon-comment"></i> <a href="#comments">8 Comments</a>	
+						</span>
+
+					</p>
+				</div>
+			</header>
+
+			<div class="post-content">
+
+				<div class="img-thumb">
+					<img class="img-responsive" src="{{ post.thumbnail.url }}" alt="">
+				</div>
+				{% autoescape off %}
+				{{ post.content }}
+				{% endautoescape %}
+			</div>
+
+
+		</article> <!-- post -->
+
+		{% include 'blog/includes/comment.html' %}
+
+
+	</div> <!-- main-content -->
+</div>
+{% endblock %}
+
+
+{% block sidebar %}
+{% include 'blog/includes/sidebar.html' %}
+{% endblock %}

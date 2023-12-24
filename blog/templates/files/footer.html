@@ -1,0 +1,172 @@
+		<div class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3">
+
+						<aside class="widget widget-text">
+							<h5 class="widget-title">text widget</h5>
+							<div class="textwidget">
+								<p>On no twenty spring of in esteem spirit likely estate. Continue new you declared differed learning bringing honoured. At mean mind so upon they rent am walk.</p>
+							</div>
+						</aside>
+
+					</div>
+
+					<div class="col-md-3">
+						
+						<aside class="widget widget-recent">
+							<h5 class="widget-title">Recent Post</h5>
+							<ul id="recent-post-list">
+								<li>
+									<a class="post-title" href="single-page.html">Design From the Spine and You’ll Be Fine</a>
+									<p class="meta-entry"><span class="post-date">July 1, 2014</span><span class="author"> by <a href="author.html">Brian Gardner</a></span></p>
+								</li>
+								<li>
+									<a class="post-title" href="single-hero.html">Design From the Spine and You’ll Be Fine</a>
+									<p class="meta-entry"><span class="post-date">July 1, 2014</span><span class="author"> by <a href="author.html">Brian Gardner</a></span></p>
+								</li>
+								<li>
+									<a class="post-title" href="single-page.html">Design From the Spine and You’ll Be Fine</a>
+									<p class="meta-entry"><span class="post-date">July 1, 2014</span><span class="author"> by <a href="author.html">Brian Gardner</a></span></p>
+								</li>
+								<li>
+									<a class="post-title" href="single-hero.html">Design From the Spine and You’ll Be Fine</a>
+									<p class="meta-entry"><span class="post-date">July 1, 2014</span><span class="author"> by <a href="author.html">Brian Gardner</a></span></p>
+								</li>
+								<li>
+									<a class="post-title" href="single-page.html">Design From the Spine and You’ll Be Fine</a>
+									<p class="meta-entry"><span class="post-date">July 1, 2014</span><span class="author"> by <a href="author.html">Brian Gardner</a></span></p>
+								</li>
+							</ul> 
+						</aside>
+
+					</div>
+
+					<div class="col-md-3">
+						
+						<aside class="widget widget-tag">
+							<h5 class="widget-title">tag cloud</h5>
+							<a href="#">Blockquotes</a>
+							<a href="#">Headline</a>
+							<a href="#">Design</a>
+							<a href="#">Beautifull</a>
+							<a href="#">Collaboration</a>
+							<a href="#">Personal</a>
+							<a href="#">Featured</a>
+							<a href="#">Professional</a>
+							<a href="#">Themes</a>
+						</aside>
+
+					</div>
+
+					<div class="col-md-3">
+						
+						<aside class="widget widget-categories">
+							<h5 class="widget-title">Categories</h5>
+							<ul>
+								<li><a href="category.html">Book</a></li>
+								<li><a href="category.html">Featured</a></li>
+								<li><a href="category.html">Music</a></li>
+								<li><a href="category.html">Painting</a></li>
+								<li><a href="category.html">Photos</a></li>
+								<li><a href="category.html">Uncategorized</a></li>
+								<li><a href="category.html">Video</a></li>
+								<li><a href="category.html">WordPress</a></li>
+								<li><a href="category.html">Writing</a></li>
+							</ul>
+						</aside>
+
+					</div>
+
+				</div>
+
+				<div class="clearfix">
+					<div class="copyright">
+						<p>PERDANA COPYRIGHT © 2015   -   <a href="https://tonjoostudio.com">TONJOO STUDIO</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+		<script src="assets/js/slick.js"></script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/jquery_cookie.js"></script>
+		<script src="assets/js/readcookies.js"></script>
+		<script src="assets/js/theme.js"></script>
+		<script src="assets/js/autonav.js"></script>
+		<script src="assets/js/collapse.js"></script>
+		<script src="assets/js/transition.js"></script>
+		<script src="assets/js/dropdown.js"></script>
+		<script src="assets/js/imgLiquid-min.js"></script>
+
+		<div class="switcher">	</div>
+
+		<script>
+			$(document).ready(function(){ 
+				var touch 	= $('.menu-toggle');
+				var menu 	= $('.main-menu');
+				var header  = $('header.masthead');
+			 
+				$(touch).on('click', function(e) {
+					e.preventDefault();
+					menu.slideToggle();
+					header.toggleClass("menu-on");
+				});
+				
+				$(window).resize(function(){
+					var w = $(window).width();
+					if(w > 767 && menu.is(':hidden')) {
+						menu.removeAttr('style');
+						header.removeClass("menu-on");
+					}
+				});
+				
+			});
+
+			$('#myCarousel').slick({
+				responsive: [
+				{
+					breakpoint: 480,
+					settings: {
+						arrows: false,
+						dots: true
+					}
+				}
+				]
+			});
+
+			$(function() {
+    
+			    $(".thumbnail, .photo, .list-article .img-thumb").imgLiquid({
+			        fill: true,
+			        horizontalAlign: "center",
+			        verticalAlign: "center"
+			    });
+			    
+			});
+
+			function respondify(){
+				  $('iframe[src*="embed.spotify.com"]').each( function() {
+				    $(this).css('width',$(this).parent(1).css('width'));
+				    $(this).attr('src',$(this).attr('src'));
+				  });
+				}
+
+				$(document).ready(function(){
+				  respondify();
+				});
+				$(window).resize(function() {
+				  respondify();
+			});
+
+
+		</script>
+
+	</body>
+</html>

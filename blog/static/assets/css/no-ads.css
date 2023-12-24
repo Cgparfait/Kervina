@@ -1,0 +1,3 @@
+header#default,
+[class*="ads-"]{display: none;}
+header#compact{display: block;}

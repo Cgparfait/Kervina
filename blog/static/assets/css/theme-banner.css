@@ -1,0 +1,30 @@
+/* HEADER HAS BANNER */
+.header .main-content{padding: 20px 0;} 
+.header .main-menu li a{
+  padding: 15px 15px;
+  font-size: 14px;
+}
+.header .main-menu li a:hover{
+  background: transparent;
+  color: inherit;
+}
+
+/* Nav on top */
+.nav-top{border-bottom: 1px solid #f7f7f7}
+.social-menu li,
+.nav-top ul.secondary-menu li{padding: 0;}
+.social-menu li a,
+.nav-top ul.secondary-menu li a{
+  line-height: 35px;
+  font-size: 12px;
+  text-transform: capitalize;
+  padding: 0 10px;
+  color: #aaa;
+}
+.nav-top ul.secondary-menu li:first-child a{padding-left: 0;}
+.social-menu li a:hover,
+.nav-top ul.secondary-menu li a:hover{color: #333;}
+.social-menu li a{
+  font-size: 20px;
+  padding: 0 5px;
+}

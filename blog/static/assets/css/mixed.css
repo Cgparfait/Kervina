@@ -1,0 +1,23 @@
+body {
+  background: url(../img/dark_embroidery.png) repeat;
+}
+body .container {
+  width: 90%;
+}
+body .masthead .container {
+  padding-left: 0;
+  padding-right: 0;
+}
+body .site-content {
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: transparent;
+}
+body .site-content > .container {
+  background-color: #fff;
+  padding: 30px;
+}
+body .site-content .hero-image {
+  margin-top: -1px;
+  margin-bottom: 0;
+}

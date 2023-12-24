@@ -1,0 +1,23 @@
+{% load static %}
+<img src="{{ post.thumnail.url }}" alt="" style="width: 30%;">
+<h2>{{ post.title }}</h2>
+<p>{{ post.content|safe }}</p>
+
+<form method="post" action="{% url 'post_like' post.id %}">
+    {% csrf_token %}
+    <button type="submit">{% if like_status %}Unlike{% else %}Like{% endif %}</button>
+</form>
+
+<!--<h3>Comments:</h3>
+{% for comment in comments %}
+    <p>{{ comment.author.username }}: {{ comment.text }}</p>
+{% endfor %}
+
+<h3>Add a comment:</h3>
+<form method="post" action="{% url 'post_detail' post_id=post.id %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+</form>-->
+
+{% include 'blog/includes/comment.html' %}
